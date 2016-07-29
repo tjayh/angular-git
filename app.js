@@ -2,8 +2,8 @@ var teejaysApp = {
     firstname:"teejay",
     lastname:"hidalgo",
     message:"hello world",
-    getWholeName: function(){
-        return this.firstname+' '+this.lastname;
+    getWholeName: function(name,last){
+        return this.firstname+' '+last;
     },
     response:"success"
 }
@@ -13,5 +13,5 @@ function getname(firstname,lastname){
     var lastname = lastname;
     return firstname+'-'+lastname;
 }
-
-console.log(getname('teejay','hidalgo'));
+teejaysApp.firstname = 'john';
+console.log(teejaysApp.getWholeName('teejay','hidalgo'));
